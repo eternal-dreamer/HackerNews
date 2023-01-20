@@ -1,0 +1,15 @@
+.searchFilter{
+    .searchFilter__content{
+        padding:10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px;
+        gap: 15px;
+        p{
+            margin:0px;
+            font-size:12px;
+        }
+    }
+}
