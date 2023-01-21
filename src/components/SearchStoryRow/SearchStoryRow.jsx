@@ -1,8 +1,9 @@
+import HTMLReactParser from 'html-react-parser';
 import moment from 'moment/moment';
 import React from 'react';
 import './SearchStoryRow.scss';
 
-function SearchStoryRow({ article, tag }) {
+function SearchStoryRow({ article }) {
   const isValidUrl = (urlString) => {
     try {
       return Boolean(new URL(urlString));
@@ -14,7 +15,7 @@ function SearchStoryRow({ article, tag }) {
   return (
     <div className="SearchStoryRow">
       <div className="SearchStoryRow__story">
-        {tag === 'story' && (
+        {article.parent_id === null && (
         <>
           <p className="SearchStoryRow__storyTitle">
             {article.title}
@@ -38,7 +39,7 @@ function SearchStoryRow({ article, tag }) {
           </span>
         </>
         )}
-        {tag === 'comment' && (
+        {article.parent_id !== null && (
           <>
 
             <span>
@@ -63,10 +64,11 @@ function SearchStoryRow({ article, tag }) {
 
             </span>
             <p className="SearchStoryRow__storyTitle">
-              {article.comment_text}
+              {HTMLReactParser(article.comment_text)}
               {' '}
 
             </p>
+            {console.log(article.comment_text)}
           </>
         )}
       </div>

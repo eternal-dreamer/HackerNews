@@ -28,7 +28,7 @@ function StoriesContentSearch({ keyword, filterData }) {
 
   return (
     <div className="StoriesContentSearch">
-      {articles.map((article) => <SearchStoryRow article={article} tag={filterData.tag} />)}
+      {articles.map((article) => <SearchStoryRow article={article} />)}
       <center>
         <Pagination
           classes={{ ul: 'newStoriesContent__pagination' }}
