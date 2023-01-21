@@ -7,9 +7,9 @@ function SearchFilter({ filterData, handleChange }) {
       <div className="searchFilter__content">
         <p>Search</p>
         <select name="tag" value={filterData.tag} onChange={(e) => handleChange(e.target.name, e.target.value)}>
-          <option value="all">All</option>
-          <option value="stories">Stories</option>
-          <option value="comments">Comments</option>
+          <option value="(story,comment)">All</option>
+          <option value="story">Stories</option>
+          <option value="comment">Comments</option>
         </select>
         <p>by</p>
         <select name="sort" value={filterData.sort} onChange={(e) => handleChange(e.target.name, e.target.value)}>
@@ -19,12 +19,11 @@ function SearchFilter({ filterData, handleChange }) {
         </select>
         <p>for</p>
         <select name="timestamp" value={filterData.timestamp} onChange={(e) => handleChange(e.target.name, e.target.value)}>
-          <option value="All Time">All Time</option>
-          <option value="Last 24H">Last 24H</option>
-          <option value="Past Week">Past Week</option>
-          <option value="Past Month">Past Month</option>
-          <option value="Past Year">Past Month</option>
-          <option value="Custom Range">Custom Range</option>
+          <option value="All">All Time</option>
+          <option value="Last24H">Last 24H</option>
+          <option value="PastWeek">Past Week</option>
+          <option value="PastMonth">Past Month</option>
+          <option value="PastYear">Past Year</option>
         </select>
       </div>
     </div>

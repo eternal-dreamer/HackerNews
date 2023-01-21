@@ -7,7 +7,7 @@ function SearchHeader({ keyword, setKeyword }) {
     <div className="searchHeader">
       <div className="searchHeader__left">
         <div className="searchHeader__logo">
-          <img src="https://hn.algolia.com/packs/media/images/logo-hn-search-a822432b.png" alt="logo" />
+          <img src="//d1sz9gun5ag95e.cloudfront.net/packs/media/images/logo-hn-search-a822432b.png" alt="logo" />
           <div className="searchHeader__name">
             <h3 className="searchHeader__head">Search</h3>
             <h3 className="searchHeader__head">Hacker News</h3>
